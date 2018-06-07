@@ -24,7 +24,7 @@ def main():
 
     repo_search_term = sys.argv[1]
     code_search_term = sys.argv[2]
-    print("Searching for repos, search term: '" + repo_search_term + "'")
+    print("Searching in repositiries for: '" + repo_search_term + "'")
     repo_search_params = urlencode({'q': repo_search_term}, quote_via=quote_plus)
     repo_url = ghserver + '/api/v3/search/code?%s' % repo_search_params
     req = urllib.request.Request(repo_url)
@@ -44,6 +44,7 @@ def main():
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     response = urllib.request.urlopen(req)
     json_response = json.load(response)
+    
     print("Results: ")
     for item in json_response['items']:
         print(item['html_url'])
