@@ -14,10 +14,12 @@ To find all projects that has `koa-body` as a dependency, and the search those p
 
 Setup access token to Github or Github Enterprise:
 ```
-export GH_SERVER="https://github.example.com/"
+export GH_SERVER="https://github.example.com"
 export GH_TOKEN=<YOUR-PERSONAL-GITHUB-ENTERPRISE-TOKEN>
 ```
 
+python 3.x
+pip install -r requirements.txt
 
 
 
